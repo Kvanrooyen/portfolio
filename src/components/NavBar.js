@@ -50,6 +50,7 @@ export default function NavBar() {
             className='mr-4'
             target='_blank'
             fgColor='#fff'
+            bgColor='#000'
             style={{ height: 35, width: 35 }}
           />
         </div>

@@ -27,7 +27,7 @@ export default function Post() {
     <main className='bg-green-100 min-h-screen p-12'>
       <section className='container mx-auto'>
         <h1 className='text-5xl flex justify-center'>Blog Post Page</h1>
-        <h2 className='text-lg text-grey-600 justify-center mb-12'>
+        <h2 className='text-lg text-gray-600 justify-center mb-12'>
           Welcome to my blogs!
         </h2>
         <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
@@ -45,7 +45,7 @@ export default function Post() {
                       className='w-full h-full roundeed-r object-cover absolute'
                     />
                     <span className='block relative h-full flex jsutify-end items-end pr-4 pb-4'>
-                      <h3 className='text-grey-800 textlg font-blog [x-3 py-4 bg-red-700  text-red-100 bg-opacity-75 rounded'>
+                      <h3 className='text-gray-800 textlg font-blog [x-3 py-4 bg-red-700  text-red-100 bg-opacity-75 rounded'>
                         {post.title}
                       </h3>
                     </span>

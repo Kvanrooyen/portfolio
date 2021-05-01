@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import sanityClient from "../client.js";
-import leaves from "../leaves.jpg";
 import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
 
@@ -29,7 +28,6 @@ export default function About() {
 
   return (
     <main className='relative'>
-      <img src={leaves} alt='Green leaves' className='absolute w-full' />
       <div className='p-10 lg:pt-48 container mx-auto relative'>
         <section className='bg-green-800 rounded-lg shadow-2xl lg:flex p-20'>
           <img

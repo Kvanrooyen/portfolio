@@ -24,19 +24,15 @@ export default function Post() {
       .catch(console.error);
   }, []);
   return (
-    <main className='bg-green-100 min-h-screen p-12'>
+    <main className='min-h-screen p-12'>
       <section className='container mx-auto'>
-        <h1 className='text-5xl flex justify-center'>Blog Post Page</h1>
-        <h2 className='text-lg text-gray-600 justify-center mb-12'>
-          Welcome to my blogs!
-        </h2>
-        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+        <div className='grid md:grid-cols-3 lg:grid-cols-4 gap-8'>
           {postData &&
             postData.map((post, index) => (
               <article>
                 <Link to={"/post/" + post.slug.current} key={post.slug.current}>
                   <span
-                    className='block h-64 relative rounded shadow leading-snug bg-white border-l-8 border-green-400'
+                    className='block h-64 relative rounded shadow leading-snug bg-white border-l-8 border-red-400'
                     key={index}
                   >
                     <img
@@ -45,7 +41,7 @@ export default function Post() {
                       className='w-full h-full roundeed-r object-cover absolute'
                     />
                     <span className='block relative h-full flex jsutify-end items-end pr-4 pb-4'>
-                      <h3 className='text-gray-800 textlg font-blog [x-3 py-4 bg-red-700  text-red-100 bg-opacity-75 rounded'>
+                      <h3 className='text-gray-800 textlg font-blog px-3 py-3 bg-white rounded'>
                         {post.title}
                       </h3>
                     </span>

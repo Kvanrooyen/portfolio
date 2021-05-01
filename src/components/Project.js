@@ -21,31 +21,17 @@ export default function Project() {
   }, []);
 
   return (
-    <main className='bg-green-100 min-h-screen p-12'>
+    <main className='min-h-screen p-6'>
       <section className='container mx-auto'>
-        <h1 className='text-5xl justify-center'>My Projects</h1>
-        <h2 className='text-lg text-gray-600 flex justify-center mb-12'>
-          Welcome to my projects!
-        </h2>
-        <section className='grid grid-cols-2 gap-8'>
+        <h1 className='text-5xl text-center py-4'>PROJECTS</h1>
+        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 '>
           {projectData &&
             projectData.map((project, index) => (
-              <article className='relative rounded-lg shadow-xl bg-white p-16'>
-                <h3 className='text-gray-800 text-3xl font-bold mb-2 hover:text-red-700'>
-                  <a
-                    href={project.link}
-                    alt={project.alt}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
-                    {project.title}
-                  </a>
+              <article className='shadow-lg rounded-md px-3 py-3 leading-snug border-l-8 border-red-400'>
+                <h3 className='text-gray-800 text-2xl font-bold mb-2'>
+                  {project.title}
                 </h3>
                 <div className='text-gray-500 text-xs space-x-4'>
-                  <span>
-                    <strong className='font-bold'>Finished on</strong>:{" "}
-                    {new Date(project.date).toLocaleDateString()}
-                  </span>
                   <span>
                     <strong className='font-bold'>Type</strong>:{" "}
                     {project.projectType}
@@ -57,17 +43,14 @@ export default function Project() {
                     href={project.link}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='text-red-500 font-bold hover:unerLine hover:text-red-400'
+                    className='text-red-500 font-bold hover:unerLin'
                   >
-                    View The Project{" "}
-                    <span role='img' aria-label='right-pointer'>
-                      👉
-                    </span>
+                    Source Code
                   </a>
                 </div>
               </article>
             ))}
-        </section>
+        </div>
       </section>
     </main>
   );

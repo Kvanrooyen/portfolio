@@ -29,15 +29,14 @@ export default function About() {
   return (
     <main className='relative'>
       <div className='container mx-auto'>
-        <section className='lg:flex p-10'>
+        <section className='lg:flex p-8'>
           <img
             src={urlFor(author.authorImage).url()}
             className='rounded w-32 h-32 lg:w-64 lg:h-64 mr-8'
             alt={author.name}
           />
           <div className='text-lg flex flex-col justify-center'>
-            <h1 className='text-5xl bold mb-4'>Hey there! I'm {author.name}</h1>
-            <div className='px-4 lg:px-6 py-4 lg:py-6 prose prose-sm sm:prose lg:prose-lg xl:prose-xl mx-auto'>
+            <div className='px-2 lg:px-6 prose sm:prose lg:prose-lg xl:prose-xl mx-auto'>
               <BlockContent
                 blocks={author.bio}
                 projectId='cthwecr7'

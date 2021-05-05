@@ -16,8 +16,10 @@ export default {
       title: "Project Type",
       type: "string",
       options: {
-        list: [{ value: "personal", title: "Personal" }],
-        list: [{ value: "work", title: "Work" }],
+        list: [
+          { value: "personal", title: "Personal" },
+          { value: "work", title: "Work" },
+        ],
       },
     },
     {

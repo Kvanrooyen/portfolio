@@ -1,32 +1,41 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-export default function NavBar() {
+const NavBar = () => {
   return (
-    <header className='bg-red-400 text-white'>
-      <div className='container mx-auto flex justify-between'>
-        <nav className='flex mx-auto'>
-          <NavLink
-            to='/'
-            exact
-            className='inline-flex items-center py-3 px-3 my-6 rounded bold text-lg'
-          >
-            PROJECTS
-          </NavLink>
-          <NavLink
-            to='/post'
-            className='inline-flex items-center py-3 px-3 my-6 rounded bold text-lg'
-          >
-            POSTS
-          </NavLink>
-          <NavLink
-            to='/about'
-            className='inline-flex items-center py-3 px-3 my-6 rounded bold text-lg'
-          >
-            ABOUT ME
-          </NavLink>
-        </nav>
+    <nav className='flex justify-between items-center h-12 bg-red-400 text-black relative'>
+      <Link to='/' className='pl-4'>
+        Keagan van Rooyen
+      </Link>
+      <div className='px-4 cursor-pointer md:hidden'>
+        <svg
+          className='w-6 h-6'
+          fill='none'
+          stroke='currentColor'
+          viewBox='0 0 24 24'
+          xmlns='http://www.w3.org/2000/svg'
+        >
+          <path
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            strokeWidth={2}
+            d='M4 6h16M4 12h16M4 18h16'
+          />
+        </svg>
       </div>
-    </header>
+      <div className='pr-8 md:block hidden'>
+        <Link className='p-4' to='/'>
+          PROJECTS
+        </Link>
+        <Link className='p-4' to='/post'>
+          POSTS
+        </Link>
+        <Link className='p-4' to='/about'>
+          ABOUT
+        </Link>
+      </div>
+    </nav>
   );
-}
+};
+
+export default NavBar;

@@ -8,10 +8,6 @@ export default {
       type: "string",
     },
     {
-      name: "date",
-      type: "datetime",
-    },
-    {
       name: "description",
       type: "text",
     },
@@ -20,7 +16,10 @@ export default {
       title: "Project Type",
       type: "string",
       options: {
-        list: [{ value: "personal", title: "Personal" }],
+        list: [
+          { value: "personal", title: "Personal" },
+          { value: "work", title: "Work" },
+        ],
       },
     },
     {
